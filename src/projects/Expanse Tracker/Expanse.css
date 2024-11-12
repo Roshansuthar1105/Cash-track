@@ -1,0 +1,229 @@
+/* General Styles */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+    background-color: #f5f5f5;
+    min-height: 100dvh;
+    min-width: 100dvw;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Container */
+  .container {
+    height:80dvh;
+    width: 95dvw;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading */
+  .container h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+  }
+  .container h2 span{
+    color: #28a745;
+  }
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #218838;
+  }
+  
+  /* Expense List */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    height: 33%;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+ ul::-webkit-scrollbar{
+    display: none;
+ }   
+  
+  ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  ul li:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Delete Button */
+  ul li button {
+    background-color: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  ul li button:hover {
+    background-color: #c82333;
+  }
+  
+  /* Total Amount */
+  p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Clear All Button */
+  button.clear-all {
+    background-color: #ff6347;
+    margin-top: 10px;
+  }
+  
+  button.clear-all:hover {
+    background-color: #e5533f;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      padding: 15px;
+      margin: 10px;
+      overflow: hidden;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 16px;
+    }
+  }
+
+
+
+
+
+  /* General styling for the list item */
+.Expanse-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the income entries */
+.income {
+  border-left: 5px solid #28a745; /* Green border */
+}
+
+/* Styling for the expense entries */
+.expense {
+  border-left: 5px solid #dc3545; /* Red border */
+}
+
+/* Expanse details styling */
+.Expanse-details {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Styling for individual elements in the details */
+.Expanse-text {
+  font-weight: bold;
+  flex: 2;
+}
+
+.Expanse-category {
+  font-style: italic;
+  color: #6c757d;
+  flex: 1;
+}
+
+.Expanse-amount {
+  flex: 1;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Income amount positive styling */
+.income .Expanse-amount {
+  color: #28a745; /* Green text for positive amounts */
+}
+
+/* Expense amount negative styling */
+.expense .Expanse-amount {
+  color: #dc3545; /* Red text for negative amounts */
+}
+
+/* Delete button styling */
+.delete-btn {
+  background-color: #ff7675;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #e74c3c;
+}
